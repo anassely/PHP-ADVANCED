@@ -1,10 +1,8 @@
 <?php
+$student['voornaam'] = "anass";
+$student['achternaam'] = "el yahiaoui";
+$student['leeftijd'] = 18;
+$student['klas'] = '1D';
 
- $anass = array("Voornaam" => "anass", "Achternaam" => "yah", "Leeftijd" => 17, "Klas" => "4");
-
-
- echo "Gegevens anass: Voornaam: " . $anass["Voornaam"] . " Achternaam: ".$anass["Achternaam"] . " Leeftijd: " . $anass["Leeftijd"] . " Klas: " . $anass["Klas"];
-
-
-
- 
+echo "Gegevens anass: Voornaam:". " " . " " . $student['voornaam'] . " " . "Achternaam:" . $student['achternaam'] . " " . "Leeftijd:" . " " . $student['leeftijd'] . " ". "Klas:" . " " . $student['klas'];
+?>
