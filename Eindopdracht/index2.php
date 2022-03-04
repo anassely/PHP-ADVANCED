@@ -4,39 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>anass</title>
+    <title></title>
 </head>
+<body>
 
-<style>
-    
-  body {
-      color: <?= $_POST["Kleur-text"] ?>;
-      background-color: <?= $_POST["Kleur-achtergrond"] ?>;
+<?php 
+echo "<body style='background-color:".$_POST['achtergrond']."'>";
+?>
+
+<?php
+    function maakRij($iets, $iets2){
+        echo "<tr>";
+        echo "<td style='border: ".$_POST['border-dikte']."px solid; color:".$_POST['tekst']."; padding:".$_POST['padding']."px;'>$iets</td>";
+        echo "<td style='border: ".$_POST['border-dikte']."px solid; color:".$_POST['tekst']."; padding:".$_POST['padding']."px;'>$iets2</td>";
+        echo "</tr>";
     }
-  table,tr,td{
-        border: <?= $_POST['zkname']?>px solid black;
-        padding:<?= $_POST['padding']?>px;
-    }
-</style>
-<center>
-    
-     <?php function maakRij($mijngegevens1,$value){
-         echo "<tr>
-         <td>".$mijngegevens1."</td>
-         <td>".$value."</td>
-         </tr> ";
-     }
-     ?>
-<table>
-       <?php
-       $mijngegevens=array(
-       "naam"=> "anass","Leefdtijd"=> 18,"muziekant"=> "2pac","woonplaats"=>"amsterdam","sport"=> "zwemmen");
-       foreach($mijngegevens as $mijngegevens1 => $value){
-          maakRij($mijngegevens1,$value);
-       }
-    
-       ?>
-</table> 
-</center>
+
+       $info1 = array("key"=>"value", "naam"=>"Rayan Ouladomar abd rahimi", "leeftijd"=>"17", "klas"=>"1d");
+
+
+
+    echo "<table style='border:  ".$_POST['border-dikte']."px solid' width='300' cellspacing='0'>";
+
+
+foreach($info1 as $idk =>$idk2){
+    maakRij($idk, $idk2);
+}
+
+    echo "</table>"
+
+?>
 </body>
 </html>
