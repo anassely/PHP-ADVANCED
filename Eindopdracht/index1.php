@@ -8,7 +8,6 @@
 </head>
 <body>
 
-<form name="Forum" method="POST" action="advanced-2.php">
 
     <p>Tabelranddikte: <input name="border-dikte"></p>
 <p>cel-padding: <input name="padding"></p>
