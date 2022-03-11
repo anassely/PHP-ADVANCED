@@ -4,38 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>anass PHP advanced eindopdracht</title>
 </head>
 <body>
+<center>
+ <form name="invoer" action="advanced-2.php" method="post">
+    <option>tekst-kleuren</option>
+    <select name="tekst-kleuren" id="tekst-kleuren">
+    <?php $kleuren = array ("pink", "cyan", "green", "black", "brown", "red");
+    foreach($kleuren as $kleur){
+        echo "<option value = $kleur> $kleur</option>"; }
+  
+ ?>
+ </select>
+ <option>achtergrond-kleuren</option>
+ <select name="achtergrond-kleuren" id="achtergrond-kleuren">
+     <?php $kleuren = array("pink", "cyan", "green", "black", "brown", "red"); 
+     foreach($kleuren as $achtergrond_color){
+         echo "<option value = $achtergrond_color>$achtergrond_color</option>";
+     }
+     ?>
 
+ </select>  
+ <div>
+   <option>tabel-bord (px)</option>
+  <input type="text" name="tbname">
+   </div>
+    <div>
+    <option>table-padding (px)</option>
+  <input type="text" name="padding">
+    </div>
+   </div>
+    <div> <input type="submit" name="submit" value="verstuur">
+         </div>
+ <form>
 
-    <p>Tabelranddikte: <input name="border-dikte"></p>
-<p>cel-padding: <input name="padding"></p>
-
-<p>Tekstkleur: 
-    <select id="kleur" name="tekst"></p>
-        <?php 
-        $kleuren = ['red' , 'blue' , 'green' , 'black' , 'brown'];
-        foreach($kleuren as $kleur){
-            echo "<option value='$kleur' selected>$kleur</option>";
-        }
-        ?>
-    </select></p>
-
-<p>Achtergrondkleur:
-    <select id="achtergrond kleur" name="achtergrond"></p>
-    <?php 
-        $kleuren2 = ['red' , 'blue' , 'green' , 'black' , 'brown'];
-        foreach($kleuren2 as $kleur2){
-            echo "<option value='$kleur2' selected>$kleur2</option>";
-        }
-        ?>
-    </select></p>
-
-
-
-<button>Verstuur</button>
-</form>
-
+    </center>
 </body>
 </html>
