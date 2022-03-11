@@ -1,38 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 <body>
-
-<?php 
-echo "<body style='background-color:".$_POST['achtergrond']."'>";
-?>
-
-<?php
-    function maakRij($iets, $iets2){
-        echo "<tr>";
-        echo "<td style='border: ".$_POST['border-dikte']."px solid; color:".$_POST['tekst']."; padding:".$_POST['padding']."px;'>$iets</td>";
-        echo "<td style='border: ".$_POST['border-dikte']."px solid; color:".$_POST['tekst']."; padding:".$_POST['padding']."px;'>$iets2</td>";
-        echo "</tr>";
-    }
-
-       $info1 = array("key"=>"value", "naam"=>"Rayan Ouladomar abd rahimi", "leeftijd"=>"17", "klas"=>"1d");
-
-
-
-    echo "<table style='border:  ".$_POST['border-dikte']."px solid' width='300' cellspacing='0'>";
-
-
-foreach($info1 as $idk =>$idk2){
-    maakRij($idk, $idk2);
+  <style>
+    
+body {
+  color: <?= $_POST["tekst-kleuren"] ?>;
+  background-color: <?= $_POST["achtergrond-kleuren"] ?>;
 }
+table,tr,td{
+    border: <?= $_POST['tbname']?>px solid black;
+    padding:<?= $_POST['padding']?>px;
+}
+</style>
+<center>'
 
-    echo "</table>"
+ <?php function maakRij($mijngegevens1,$value){
+     echo "<tr>
+     <td>".$mijngegevens1."</td>
+     <td>".$value."</td>
+     </tr> ";
+ }
+ ?>
+  <table>
+   <?php
+   $mijngegevens=array(
+   "naam"=> "Abdel Souhali","Leefdtijd"=> 19,"artiest"=> "Playboi Carti","woonplaats"=>"Amsterdam","sport"=> "Voetbal");
+   foreach($mijngegevens as $mijngegevens1 => $value){
+      maakRij($mijngegevens1,$value);
+   }
 
-?>
+   ?>
+  </table>
+
+</center>
 </body>
 </html>
