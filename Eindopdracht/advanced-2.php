@@ -8,7 +8,7 @@
 </head>
 <body>
 <center>
- <form name="invoer" action="advanced-2.php" method="post">
+ <form name="invoer" action="index2.php" method="post">
     <option>tekst-kleuren</option>
     <select name="tekst-kleuren" id="tekst-kleuren">
     <?php $kleuren = array ("pink", "cyan", "green", "black", "brown", "red");
