@@ -30,7 +30,7 @@ table,tr,td{
   <table>
    <?php
    $mijngegevens=array(
-   "naam"=> "Nassim Omaati","Leefdtijd"=> 17,"artiest"=> "Kanye West","woonplaats"=>"Amsterdam","games"=> "dying light");
+   "naam"=> "anass yahiaoui","Leefdtijd"=> 18,"artiest"=> "Kanye West","woonplaats"=>"Amsterdam","games"=> "dying light");
    foreach($mijngegevens as $mijngegevens1 => $value){
       maakRij($mijngegevens1,$value);
    }
